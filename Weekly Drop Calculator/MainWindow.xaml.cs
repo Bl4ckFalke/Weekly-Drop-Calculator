@@ -46,6 +46,7 @@ namespace Weekly_Drop_Calculator
                 if (Convert.ToInt64(eingabe_XP.Text) > 5000)
                 {
                     xp = 5000;
+                    eingabe_XP.Text = "5000"; // Setze den Text auf 5000, wenn der Wert größer ist
                 }
                 else
                 xp = Convert.ToInt32(eingabe_XP.Text);
@@ -83,6 +84,16 @@ namespace Weekly_Drop_Calculator
             
 
            
+        }
+
+       
+
+        private void eingabe_XP_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                bttn_calculate_Click(sender, e);
+            }
         }
     }
 }
