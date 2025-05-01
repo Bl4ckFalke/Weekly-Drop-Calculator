@@ -42,11 +42,13 @@ namespace Weekly_Drop_Calculator
         {
             if (eingabe_XP.Text == "")
             {
-                ausgabe.Content = "Bitte XP eingeben.";
+                
+                MessageBox.Show("Bitte XP eingeben", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (Convert.ToInt32(eingabe_XP.Text) <= 0)
             {
-                ausgabe.Content = "XP muss größer als 0 sein.";
+                
+                MessageBox.Show("XP muss größer als 0 sein", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             { 
