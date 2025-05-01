@@ -40,29 +40,49 @@ namespace Weekly_Drop_Calculator
 
         private void bttn_calculate_Click(object sender, RoutedEventArgs e)
         {
-            if (eingabe_XP.Text == "")
+            int xp = 0;
+            try
             {
-                
-                MessageBox.Show("Bitte XP eingeben", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else if (Convert.ToInt32(eingabe_XP.Text) <= 0)
-            {
-                
-                MessageBox.Show("XP muss größer als 0 sein", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
-            { 
-                int xp = Convert.ToInt32(eingabe_XP.Text);
-                int roundXp = 120;
-                if(!chBox_xbBoost.IsChecked == true)
+                if (Convert.ToInt64(eingabe_XP.Text) > 5000)
                 {
-                    roundXp -= 90;
+                    xp = 5000;
                 }
-                
-                double leftRounds = (double)xp / roundXp; // Explizite Konvertierung von xp zu double
-                int rounds = (int)Math.Ceiling(leftRounds);
-                ausgabe.Content = rounds;
+                else
+                xp = Convert.ToInt32(eingabe_XP.Text);
+
+                if (eingabe_XP.Text == "")
+                {
+
+                    MessageBox.Show("Bitte XP eingeben", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else if (Convert.ToInt32(eingabe_XP.Text) <= 0)
+                {
+
+                    MessageBox.Show("XP muss größer als 0 sein", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+                else
+                {
+
+                    int roundXp = 120;
+                    if (!chBox_xbBoost.IsChecked == true)
+                    {
+                        roundXp -= 90;
+                    }
+
+                    double leftRounds = (double)xp / roundXp; // Explizite Konvertierung von xp zu double
+                    int rounds = (int)Math.Ceiling(leftRounds);
+                    ausgabe.Content = rounds;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Die Fehlende XP Anzahl darf nicht mehr als 5000 betragen", "Fehler", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            
+
+           
         }
     }
 }
