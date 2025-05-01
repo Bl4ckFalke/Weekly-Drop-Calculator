@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weekly_Drop_Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="365" Width="362">
     <Grid>
+        <Button x:Name="bttn_calculate" Content="Calculate" Margin="0,0,27,55" Click="bttn_calculate_Click" HorizontalAlignment="Right" Width="92" Height="28" VerticalAlignment="Bottom"/>
+        <Label x:Name="ausgabe" Content="" Margin="0,0,27,25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>
+        <TextBox x:Name="eingabe_XP" Margin="0,0,27,88" TextWrapping="Wrap" Text="" PreviewTextInput="eingabe_XP_PreviewTextInput" 
+                 PreviewKeyDown="eingabe_XP_PreviewKeyDown" HorizontalAlignment="Right" Width="92" Height="26" VerticalAlignment="Bottom"/>
+        <Label Content="xp:" HorizontalAlignment="Right" Height="26" Margin="0,0,124,88" VerticalAlignment="Bottom" Width="27"/>
+        <CheckBox x:Name="chBox_xbBoost" Content="xpBoost" Margin="0,0,27,119" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>
+        <Label Content="Fehlende gewonnende Runden:" HorizontalAlignment="Right" Height="26" Margin="0,0,124,25" VerticalAlignment="Bottom" Width="178"/>
 
     </Grid>
 </Window>
