@@ -20,6 +20,7 @@ namespace Weekly_Drop_Calculator
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         private void eingabe_XP_PreviewTextInput(object sender, TextCompositionEventArgs e)
