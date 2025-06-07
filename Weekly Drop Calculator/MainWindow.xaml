@@ -5,19 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Weekly_Drop_Calculator"
         mc:Ignorable="d"
-        Title="Drop Calculator" Height="198" Width="354" Background="#FF191919" ThemeMode="Dark" ResizeMode="NoResize" >
+        Title="Drop Calculator" Height="199" Width="380" Background="#FF191919" ThemeMode="Dark" ResizeMode="NoResize" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="101*"/>
             <ColumnDefinition Width="261*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="bttn_calculate" Content="Calculate" Margin="0,0,27,55" Click="bttn_calculate_Click" HorizontalAlignment="Right" Width="92" Height="28" VerticalAlignment="Bottom" Grid.Column="1"/>
-        <Label x:Name="ausgabe" Content="" Margin="0,0,10,25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="109" Foreground="Gainsboro" Grid.Column="1"/>
+        <Label x:Name="ausgabe" Content="" Margin="0,0,10,25" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="203" Foreground="Gainsboro" Grid.Column="1"/>
         <TextBox x:Name="eingabe_XP" Margin="0,0,27,88" TextWrapping="Wrap" Text="" PreviewTextInput="eingabe_XP_PreviewTextInput" 
                  PreviewKeyDown="eingabe_XP_PreviewKeyDown" HorizontalAlignment="Right" Width="92" Height="26" VerticalAlignment="Bottom" Grid.Column="1" KeyUp="eingabe_XP_KeyUp"/>
         <Label x:Name="l_fehlendeXp" Content="Fehlende XP:" HorizontalAlignment="Right" Height="26" Margin="0,0,124,88" VerticalAlignment="Bottom" Width="89" Foreground="Gainsboro" Grid.Column="1"/>
         <CheckBox x:Name="chBox_xbBoost" Content="xpBoost" Margin="0,0,0,119" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92" IsChecked="True" Foreground="Gainsboro" Grid.Column="1"/>
-        <Label x:Name="l_fgr" Content="Fehlende gewonnende Runden:" HorizontalAlignment="Right" Height="26" Margin="0,0,124,25" VerticalAlignment="Bottom" Width="178" Foreground="Gainsboro" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

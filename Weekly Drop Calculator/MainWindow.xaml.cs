@@ -73,8 +73,19 @@ namespace Weekly_Drop_Calculator
                     }
 
                     double leftRounds = (double)xp / roundXp; // Explizite Konvertierung von xp zu double
+                    double leftWins = 0;
+                    while (leftRounds / 13 >= 1)
+                    {
+                        leftWins += 1;
+                        leftRounds /= 13;
+                    }
+                    if(leftWins >0 && leftRounds >13)
+                    {
+                        leftRounds -= 13;
+                    }
+
                     int rounds = (int)Math.Ceiling(leftRounds);
-                    ausgabe.Content = rounds;
+                    ausgabe.Content = $"es  Fehlt {leftWins} Win/s und  {rounds} Runde/n";
                 }
             }
             catch (Exception ex)
